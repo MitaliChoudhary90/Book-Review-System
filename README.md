@@ -247,21 +247,29 @@ Below is the basic schema design for the Book Review API using MongoDB (via Mong
 
 
 📁 Project Structure
-pgsql
-Copy
-Edit
 book-review-api/
-│
 ├── controllers/
-├── models/
-├── routes/
+│   ├── authController.js
+│   ├── bookController.js
+│   └── reviewController.js
 ├── middleware/
-├── utils/
+│   └── authMiddleware.js
+├── models/
+│   ├── Book.js
+│   ├── Review.js
+│   └── User.js
+├── routes/
+│   ├── authRoutes.js
+│   ├── bookRoutes.js
+│   └── reviewRoutes.js
 ├── .env
 ├── .gitignore
-├── server.js
+├── app.js
+├── package.json
 ├── README.md
-└── package.json
+└── config/
+    └── db.js
+
 
 
 📌 Assumptions
