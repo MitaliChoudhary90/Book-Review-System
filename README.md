@@ -257,7 +257,7 @@ book-review-api/
 ├── models/
 │   ├── Book.js
 │   ├── Review.js
-│   └── User.js
+│   └── User.jS
 ├── routes/
 │   ├── authRoutes.js
 │   ├── bookRoutes.js
