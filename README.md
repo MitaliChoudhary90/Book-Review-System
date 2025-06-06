@@ -80,7 +80,7 @@ DELETE /api/reviews/:id – Delete your review
 
 #Use JWT token in headers:
 Authorization: Bearer your_token_here
-
+```
 🧪 Sample API Requests
 
 📬 Example API Requests (with Postman)
@@ -212,7 +212,7 @@ URL: /reviews/REVIEW_ID
 Headers:
 Authorization: Bearer your-jwt-token
 
-
+```
 📊 Database Schema
 
 Below is the basic schema design for the Book Review API using MongoDB (via Mongoose).
