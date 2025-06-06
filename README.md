@@ -245,7 +245,7 @@ Below is the basic schema design for the Book Review API using MongoDB (via Mong
 
 
 
-
+```
 📁 Project Structure
 book-review-api/
 ├── controllers/
@@ -270,7 +270,7 @@ book-review-api/
 └── config/
     └── db.js
 
-
+```
 
 📌 Assumptions
 Each user can only review a book once
