@@ -79,22 +79,135 @@ Authorization: Bearer your_token_here
 
 🧪 Sample API Requests
 
-📌 POST /api/signup
+📬 Example API Requests (with Postman)
+
+Base URL: http://localhost:5001/api     or      http://127.0.0.1:5001/api
+
+
+User Signup
+
+Method: POST
+
+URL: /signup
+
+Body (JSON):
 {
-  "username": "john_doe",
-  "password": "securepass123"
+"username": "john_doe",
+"password": "securePassword123"
 }
 
-📌 POST /api/books/:id/reviews
+
+
+User Login
+
+Method: POST
+
+URL: /login
+
+Body (JSON):
+{
+"username": "john_doe",
+"password": "securePassword123"
+}
+
+Response:
+{
+"token": "your-jwt-token-here"
+}
+
+
+
+
+Add a Book
+
+Method: POST
+
+URL: /books
+
 Headers:
-Authorization: Bearer YOUR_JWT_TOKEN
+Authorization: Bearer your-jwt-token
+Content-Type: application/json
+
+Body (JSON):
 {
-  "rating": 4,
-  "comment": "Amazing book!"
+"title": "The Alchemist",
+"author": "Paulo Coelho",
+"genre": "Fiction"
 }
 
-📌 GET /api/books/search?q=harry
-Returns all books matching "harry" in title or author.
+
+
+
+Get All Books (with optional filters)
+
+Method: GET
+
+URL: /books?page=1&limit=5&author=Paulo Coelho&genre=Fiction
+
+
+
+
+Get Book Details
+
+Method: GET
+
+URL: /books/BOOK_ID
+
+
+
+Search Books by Title or Author
+
+Method: GET
+
+URL: /books/search?q=alchemist
+
+
+
+Submit a Review
+
+Method: POST
+
+URL: /books/BOOK_ID/reviews
+
+Headers:
+Authorization: Bearer your-jwt-token
+Content-Type: application/json
+
+Body (JSON):
+{
+"rating": 5,
+"comment": "Inspiring and thought-provoking!"
+}
+
+
+
+Update a Review
+
+Method: PUT
+
+URL: /reviews/REVIEW_ID
+
+Headers:
+Authorization: Bearer your-jwt-token
+Content-Type: application/json
+
+Body (JSON):
+{
+"rating": 4,
+"comment": "Still great, but not perfect."
+}
+
+
+
+Delete a Review
+
+Method: DELETE
+
+URL: /reviews/REVIEW_ID
+
+Headers:
+Authorization: Bearer your-jwt-token
+
 
 
 📁 Project Structure
