@@ -30,15 +30,19 @@ bcrypt
 
 📦 Installation
 
+
 #Clone the repository:
 git clone https://github.com/<your-username>/book-review-api.git
 cd book-review-api
 
+
 #Install dependencies:
-npm install
+npm install bcrypt cors dotenv express jsonwebtoken mongoose nodemon
+
 
 #Create a .env file in the root with the following variables:
-PORT=5000
+
+PORT=5001
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 
