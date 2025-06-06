@@ -213,6 +213,38 @@ Headers:
 Authorization: Bearer your-jwt-token
 
 
+📊 Database Schema
+
+Below is the basic schema design for the Book Review API using MongoDB (via Mongoose).
+
+1- USER
+| Field    | Type   | Description                  |
+| -------- | ------ | ---------------------------- |
+| username | String | Required, unique username    |
+| password | String | Hashed password using bcrypt |
+
+2-BOOK
+| Field     | Type                | Description                               |
+| --------- | ------------------- | ----------------------------------------- |
+| title     | String              | Required book title                       |
+| author    | String              | Optional author name                      |
+| genre     | String              | Optional genre (e.g., Fiction, Biography) |
+| createdBy | ObjectId (ref User) | ID of the user who added the book         |
+| createdAt | Date                | Timestamp (default)                       |
+
+
+3-REVIEW
+| Field     | Type                | Description                         |
+| --------- | ------------------- | ----------------------------------- |
+| rating    | Number (1–5)        | Required rating value               |
+| comment   | String              | Optional comment                    |
+| user      | ObjectId (ref User) | ID of the user who wrote the review |
+| book      | ObjectId (ref Book) | ID of the reviewed book             |
+| createdAt | Date                | Timestamp                           |
+| updatedAt | Date                | Timestamp (auto-updated)            |
+
+
+
 
 📁 Project Structure
 pgsql
